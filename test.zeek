@@ -12,7 +12,7 @@ event http_header(C:connection, is_orig:bool, name:string, value:string)
 			a[ip] = agt;
 		else
 			if( [ip] !in b)
-				b[ip] = agr;
+				b[ip] = agt;
 			else
 				if(a[ip] != agt && b[ip] != agt)
 					print ip,"is a proxy";
