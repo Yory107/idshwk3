@@ -4,6 +4,8 @@ global b:table[addr] of string;
 
 event http_header(C:connection, is_orig:bool, name:string, value:string)
 	{
+                if(!C$http?$user_agent)
+                        return;
 		local ip = C$id$orig_h;
                 local agt = C$http$user_agent;
 		#print ip;
