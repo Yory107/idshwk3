@@ -2,7 +2,7 @@ global a:table[addr] of string;
 global b:table[addr] of string;
 
 
-event http_header(C:connection, is_orig:bool, name:string, value:string)
+event http_entity_data(C:connection, is_orig:bool, length:count, data:string)
 	{
                 if(!C$http?$user_agent)
                         return;
