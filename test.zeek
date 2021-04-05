@@ -21,7 +21,7 @@ event http_header(C:connection, is_orig:bool, name:string, value:string)
 			else
 			{
 				if(a[ip] != agt && b[ip] != agt)
-					print ip,"is a proxy";
+					print fmt("%s is a proxy",ip);
 			}
 		}
 	}
